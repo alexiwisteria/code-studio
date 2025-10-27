@@ -40,7 +40,7 @@ export function Hero() {
               className="bg-gradient-to-r from-[#9d4edd] to-[#FF8BA7] hover:opacity-90 text-white border-0 shadow-lg shadow-[#9d4edd]/30 transition-all hover:shadow-xl hover:shadow-[#9d4edd]/40"
               asChild
             >
-              <a href="/resume.pdf" download>
+              <a href="/Alexis_Binch_Lee_Resume.pdf" download="Alexis_Binch_Lee_Resume.pdf">
                 Download Resume
               </a>
             </Button>
