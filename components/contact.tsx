@@ -50,7 +50,7 @@ export function Contact() {
   return (
     <section id="contact" className="py-24 bg-gradient-to-b from-[#2d1b3d] to-[#1a1a2e] pt-32">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-[#F5F3F4] mb-12 text-center">Get In Touch</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-[#F5F3F4] mb-12 text-center">Get In Touch</h2>
 
         <div className="max-w-2xl mx-auto">
           <div className="bg-gradient-to-br from-[#2d1b3d]/50 to-[#1a1a2e]/50 backdrop-blur-sm rounded-2xl p-8 border border-[#FF6B35]/20 shadow-xl">
@@ -131,7 +131,7 @@ export function Contact() {
 
               <div className="flex justify-center gap-4">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/alexiwisteria?tab=repositories"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-lg bg-gradient-to-br from-[#FF6B35]/20 to-[#9d4edd]/20 hover:from-[#FF6B35]/30 hover:to-[#9d4edd]/30 border border-[#FF6B35]/30 transition-all hover:shadow-lg hover:shadow-[#FF6B35]/20"
@@ -140,7 +140,7 @@ export function Contact() {
                 </a>
 
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/alexisbinchlee/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-lg bg-gradient-to-br from-[#FF6B35]/20 to-[#9d4edd]/20 hover:from-[#FF6B35]/30 hover:to-[#9d4edd]/30 border border-[#FF6B35]/30 transition-all hover:shadow-lg hover:shadow-[#FF6B35]/20"
@@ -149,7 +149,7 @@ export function Contact() {
                 </a>
 
                 <a
-                  href="https://youtube.com/@BrightLineDesk"
+                  href="https://www.youtube.com/@alexisbinchlee/featured"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-3 rounded-lg bg-gradient-to-br from-[#FF6B35]/20 to-[#9d4edd]/20 hover:from-[#FF6B35]/30 hover:to-[#9d4edd]/30 border border-[#FF6B35]/30 transition-all hover:shadow-lg hover:shadow-[#FF6B35]/20"

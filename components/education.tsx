@@ -4,7 +4,7 @@ export function Education() {
   return (
     <section id="education" className="py-24 bg-gradient-to-b from-[#3d2645] to-[#2d1b3d] pt-32">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-[#F5F3F4] mb-12 text-center">Education</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-[#F5F3F4] mb-12 text-center">Education</h2>
 
         <div className="max-w-3xl mx-auto">
           <div className="group bg-gradient-to-br from-[#2d1b3d]/50 to-[#1a1a2e]/50 backdrop-blur-sm rounded-2xl p-8 border border-[#FF6B35]/20 hover:border-[#FF8BA7]/40 transition-all duration-300 hover:shadow-xl hover:shadow-[#FF6B35]/20">

@@ -52,7 +52,7 @@ export function Skills() {
   return (
     <section id="skills" className="py-24 bg-gradient-to-b from-[#2d1b3d] to-[#1a1a2e] pt-32">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-[#F5F3F4] mb-12 text-center">Skills</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-[#F5F3F4] mb-12 text-center">Skills</h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {skillCategories.map((category) => {

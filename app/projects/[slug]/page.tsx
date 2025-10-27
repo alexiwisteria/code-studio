@@ -11,6 +11,7 @@ const projectData: Record<
     longDescription: string
     tech: string[]
     videoUrl?: string
+    isYoutube?: boolean
     features: string[]
     github?: string
     demo?: string
@@ -22,7 +23,8 @@ const projectData: Record<
     longDescription:
       "GitGrade is a comprehensive full-stack web application that seamlessly integrates GitHub Classroom with Canvas LMS. It enables automated assignment linking and autograding for educational institutions, featuring a multi-tenant architecture with role-based access control supporting administrators, teachers, and students.",
     tech: ["Next.js", "TypeScript", "Prisma", "GitHub OAuth", "OpenAI", "Canvas API"],
-    videoUrl: "/videos/gitgrade-demo.mp4",
+    videoUrl: "https://www.youtube.com/embed/OnrQSQqqRaw?si=1vnHOT2wBo7QVqix",
+    isYoutube: true,
     features: [
       "Automated grading system that processes GitHub repository submissions",
       "Real-time feedback and scoring with automatic Canvas gradebook updates",
@@ -30,55 +32,6 @@ const projectData: Record<
       "Secure authentication via GitHub OAuth and Canvas API integration",
       "Test suite execution and automated feedback generation",
     ],
-    github: "https://github.com",
-    demo: "https://gitgrade.dev",
-  },
-  "accessible-work": {
-    title: "Accessible Work",
-    description: "Job board connecting people with disabilities to inclusive employment",
-    longDescription:
-      "Accessible Work is a dedicated job board platform designed to connect people with disabilities to inclusive employment opportunities. The platform prioritizes accessible design and features dynamic filtering to help users find jobs that accommodate their specific accessibility needs.",
-    tech: ["React", "Next.js", "TypeScript", "WCAG", "ADA Compliance"],
-    videoUrl: "/videos/accessible-work-demo.mp4",
-    features: [
-      "Dynamic filtering system for accessibility needs (blindness, wheelchair use, service dogs)",
-      "WCAG and ADA compliant design throughout",
-      "Personalized job recommendations based on accessibility requirements",
-      "Employer dashboard for posting accessible job opportunities",
-      "User profiles with accessibility preferences",
-    ],
-    github: "https://github.com",
-  },
-  cleariq: {
-    title: "ClearIQ",
-    description: "SaaS platform for small business analytics and reporting",
-    longDescription:
-      "ClearIQ is a comprehensive SaaS platform designed specifically for small businesses, focusing on automated reporting and dashboard generation. The platform simplifies decision-making for non-technical users through intuitive dashboards and real-time data access.",
-    tech: ["Python", "Next.js", "SQL", "Cloud Architecture", "Real-time Analytics"],
-    videoUrl: "/videos/cleariq-demo.mp4",
-    features: [
-      "Automated reporting and dashboard generation",
-      "Cloud-based architecture for real-time data access",
-      "Intuitive dashboards designed for non-technical users",
-      "Customizable analytics and insights",
-      "Scalable infrastructure for growing businesses",
-    ],
-    github: "https://github.com",
-  },
-  "example-project": {
-    title: "Example Project",
-    description: "A sample project showcasing GitHub integration",
-    longDescription:
-      "This is an example project that demonstrates how to showcase projects with GitHub links when the repository is public and doesn't require a demo video. This template is perfect for open-source projects or when you want to direct visitors straight to the code.",
-    tech: ["React", "TypeScript", "Node.js", "Express", "MongoDB"],
-    features: [
-      "Clean and maintainable codebase",
-      "Comprehensive documentation",
-      "Unit and integration tests",
-      "CI/CD pipeline setup",
-      "Docker containerization",
-    ],
-    github: "https://github.com/yourusername/example-project",
   },
   "ai-voice-tutor": {
     title: "AI Tutoring Whiteboard",
@@ -86,6 +39,8 @@ const projectData: Record<
     longDescription:
       "AI Tutoring Whiteboard is a multimodal learning platform that merges visual work and conversation into a single flow. Unlike other tutoring tools that separate whiteboard interactions from chat, this project allows the AI to 'see' the board, listen to the student, and respond with voice, text, and visual aids simultaneously. Built with React, TypeScript, and cutting-edge AI services, it features interactive canvas drawing, voice input via Web Speech API, vision analysis of student work via Google Gemini 2.0 Flash, natural voice responses through ElevenLabs, and customizable tutoring 'pushiness' levels (1-5) to fit individual learning preferences.",
     tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "Google Gemini 2.0 Flash", "ElevenLabs TTS", "Runware", "Bolt Database", "Web Speech API", "Canvas API"],
+    videoUrl: "https://www.youtube.com/embed/1vqkAX20MLM?si=qN421dCkQmndEIeF",
+    isYoutube: true,
     features: [
       "Interactive whiteboard with pencil, eraser, color & line width controls",
       "Voice input via Web Speech API for hands-free question asking",
@@ -98,6 +53,20 @@ const projectData: Record<
     ],
     github: "https://github.com/alexiwisteria/AIVoiceTutor",
     demo: "https://ai-whiteboard-voice-r4vc.bolt.host/",
+  },
+  cleariq: {
+    title: "ClearIQ",
+    description: "An AI-powered dashboarding application that transforms complex data into actionable insights.",
+    longDescription:
+      "ClearIQ is an advanced AI-powered dashboarding application designed to help businesses and individuals make sense of their data through intelligent visualization and analysis. By leveraging cutting-edge AI capabilities, ClearIQ automatically identifies patterns, generates insights, and presents data in an intuitive, actionable format.",
+    tech: ["AI", "Dashboarding", "Data Visualization"],
+    features: [
+      "Intelligent data analysis and pattern recognition",
+      "Automated insight generation from complex datasets",
+      "Intuitive and user-friendly dashboard interface",
+      "Customizable visualizations and reports",
+      "Real-time data processing and updates",
+    ],
   },
 }
 
@@ -143,14 +112,27 @@ export default async function ProjectPage({
         </div>
 
         {/* Demo Video */}
-        {project.videoUrl && (
+        {project.videoUrl && project.isYoutube ? (
+          <div className="mb-12 rounded-2xl overflow-hidden border border-[#FF6B35]/20 bg-gradient-to-br from-[#2d1b3d]/50 to-[#1a1a2e]/50 backdrop-blur-sm">
+            <div className="w-full aspect-video">
+              <iframe
+                className="w-full h-full"
+                src={project.videoUrl}
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        ) : project.videoUrl ? (
           <div className="mb-12 rounded-2xl overflow-hidden border border-[#FF6B35]/20 bg-gradient-to-br from-[#2d1b3d]/50 to-[#1a1a2e]/50 backdrop-blur-sm">
             <video controls className="w-full aspect-video" poster="/video-placeholder.png">
               <source src={project.videoUrl} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
-        )}
+        ) : null}
 
         {!project.videoUrl && project.github && (
           <div className="mb-12 rounded-2xl overflow-hidden border border-[#FF6B35]/20 bg-gradient-to-br from-[#2d1b3d]/50 to-[#1a1a2e]/50 backdrop-blur-sm p-12 text-center">
@@ -230,34 +212,36 @@ export default async function ProjectPage({
             </div>
 
             {/* Links */}
-            <div className="bg-gradient-to-br from-[#2d1b3d]/50 to-[#1a1a2e]/50 backdrop-blur-sm rounded-2xl p-6 border border-[#FF6B35]/20">
-              <h3 className="text-xl font-bold text-[#F5F3F4] mb-4">Links</h3>
-              <div className="space-y-3">
-                {project.github && (
-                  <Button
-                    className="w-full bg-gradient-to-r from-[#FF6B35] to-[#FFC857] hover:opacity-90 text-white border-0"
-                    asChild
-                  >
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">
-                      <Github className="w-4 h-4 mr-2" />
-                      View on GitHub
-                    </a>
-                  </Button>
-                )}
-                {project.demo && (
-                  <Button
-                    variant="outline"
-                    className="w-full border-[#FF6B35]/40 text-[#F5F3F4] hover:bg-[#FF6B35]/10 bg-transparent"
-                    asChild
-                  >
-                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Live Demo
-                    </a>
-                  </Button>
-                )}
+            {(project.github || project.demo) && (
+              <div className="bg-gradient-to-br from-[#2d1b3d]/50 to-[#1a1a2e]/50 backdrop-blur-sm rounded-2xl p-6 border border-[#FF6B35]/20">
+                <h3 className="text-xl font-bold text-[#F5F3F4] mb-4">Links</h3>
+                <div className="space-y-3">
+                  {project.github && (
+                    <Button
+                      className="w-full bg-gradient-to-r from-[#FF6B35] to-[#FFC857] hover:opacity-90 text-white border-0"
+                      asChild
+                    >
+                      <a href={project.github} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 mr-2" />
+                        View on GitHub
+                      </a>
+                    </Button>
+                  )}
+                  {project.demo && (
+                    <Button
+                      variant="outline"
+                      className="w-full border-[#FF6B35]/40 text-[#F5F3F4] hover:bg-[#FF6B35]/10 bg-transparent"
+                      asChild
+                    >
+                      <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Live Demo
+                      </a>
+                    </Button>
+                  )}
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </div>

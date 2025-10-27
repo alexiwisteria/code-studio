@@ -12,19 +12,19 @@ export function CodingActivity() {
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="mb-12 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#F5F3F4] mb-4">30-Day Coding Summary</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#F5F3F4] mb-4">30-Day Coding Summary</h2>
           <p className="text-[#F5F3F4]/70 text-lg">Live Statistics</p>
         </div>
 
         {/* Charts Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Daily Activity */}
-          <div className="lg:col-span-2">
+          <div>
             <WakaDailyBar />
           </div>
 
           {/* Language Breakdown */}
-          <div className="lg:col-span-2">
+          <div>
             <WakaLanguagesDonut />
           </div>
         </div>

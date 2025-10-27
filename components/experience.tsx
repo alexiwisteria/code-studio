@@ -25,7 +25,7 @@ export function Experience() {
   return (
     <section id="experience" className="py-24 bg-gradient-to-b from-[#2d1b3d] to-[#3d2645] pt-32">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-[#F5F3F4] mb-12 text-center">Experience</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-[#F5F3F4] mb-12 text-center">Experience</h2>
 
         <div className="max-w-4xl mx-auto space-y-6">
           {experiences.map((exp, index) => (

@@ -1,0 +1,2 @@
+# Ensure PDF files are treated as binary
+*.pdf binary

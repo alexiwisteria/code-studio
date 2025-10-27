@@ -9,36 +9,7 @@ const projects = [
     description:
       "An AI-powered autograding system that integrates with Canvas LMS and GitHub to automate code assessment and feedback for programming assignments.",
     tech: ["Next.js", "TypeScript", "Prisma", "GitHub OAuth", "OpenAI"],
-    github: "https://github.com",
-    demo: "https://gitgrade.dev",
     hasVideo: true,
-  },
-  {
-    slug: "accessible-work",
-    title: "Accessible Work",
-    description:
-      "A web application featuring WCAG accessibility filters and tools to help developers test and improve website accessibility compliance.",
-    tech: ["React", "JavaScript", "WCAG", "A11y"],
-    github: "https://github.com",
-    hasVideo: true,
-  },
-  {
-    slug: "cleariq",
-    title: "ClearIQ",
-    description:
-      "Business intelligence dashboards for small businesses, providing real-time analytics and insights using Power BI integration.",
-    tech: ["Python", "Flask", "Power BI", "SQL"],
-    github: "https://github.com",
-    hasVideo: true,
-  },
-  {
-    slug: "example-project",
-    title: "Example Project",
-    description:
-      "A sample project showcasing GitHub integration without a demo video. Perfect for public repositories.",
-    tech: ["React", "TypeScript", "Node.js"],
-    github: "https://github.com/yourusername/example-project",
-    hasVideo: false,
   },
   {
     slug: "ai-voice-tutor",
@@ -48,7 +19,15 @@ const projects = [
     tech: ["React", "TypeScript", "Vite", "Google Gemini", "ElevenLabs TTS"],
     github: "https://github.com/alexiwisteria/AIVoiceTutor",
     demo: "https://ai-whiteboard-voice-r4vc.bolt.host/",
-    hasVideo: false,
+    hasVideo: true,
+  },
+  {
+    slug: "cleariq",
+    title: "ClearIQ",
+    description:
+      "An AI-powered dashboarding application that transforms data into actionable insights.",
+    tech: ["AI", "Dashboarding", "Data Visualization"],
+    comingSoon: true,
   },
 ]
 
@@ -56,7 +35,7 @@ export function Projects() {
   return (
     <section id="projects" className="py-24 bg-gradient-to-b from-[#1a1a2e] to-[#2d1b3d] pt-32">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-[#F5F3F4] mb-12 text-center">Projects</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-[#F5F3F4] mb-12 text-center">Projects</h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {projects.map((project) => (
@@ -79,46 +58,56 @@ export function Projects() {
                 ))}
               </div>
 
-              <div className="flex gap-3 flex-wrap">
-                <Button
-                    size="sm"
-                    className="bg-gradient-to-r from-[#FF6B35] to-[#FFC857] hover:opacity-90 text-white border-0 flex-1"
-                    asChild
-                  >
-                    <Link href={`/projects/${project.slug}`}>
-                      <Play className="w-4 h-4 mr-2" />
-                      View Details
-                    </Link>
-                  </Button>
-
-                {project.github && (
+              {!project.comingSoon && (
+                <div className="flex gap-3 flex-wrap">
                   <Button
-                    size="sm"
-                    variant="outline"
-                    className="border-[#FF6B35]/40 text-[#F5F3F4] hover:bg-[#FF6B35]/10 bg-transparent flex-1"
-                    asChild
-                  >
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">
-                      <Github className="w-4 h-4 mr-2" />
-                      GitHub
-                    </a>
-                  </Button>
-                )}
+                      size="sm"
+                      className="bg-gradient-to-r from-[#FF6B35] to-[#FFC857] hover:opacity-90 text-white border-0 flex-1"
+                      asChild
+                    >
+                      <Link href={`/projects/${project.slug}`}>
+                        <Play className="w-4 h-4 mr-2" />
+                        View Details
+                      </Link>
+                    </Button>
 
-                {project.demo && (
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="border-[#FF6B35]/40 text-[#F5F3F4] hover:bg-[#FF6B35]/10 bg-transparent flex-1"
-                    asChild
-                  >
-                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Demo
-                    </a>
-                  </Button>
-                )}
-              </div>
+                  {project.github && (
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="border-[#FF6B35]/40 text-[#F5F3F4] hover:bg-[#FF6B35]/10 bg-transparent flex-1"
+                      asChild
+                    >
+                      <a href={project.github} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 mr-2" />
+                        GitHub
+                      </a>
+                    </Button>
+                  )}
+
+                  {project.demo && (
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="border-[#FF6B35]/40 text-[#F5F3F4] hover:bg-[#FF6B35]/10 bg-transparent flex-1"
+                      asChild
+                    >
+                      <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Demo
+                      </a>
+                    </Button>
+                  )}
+                </div>
+              )}
+
+              {project.comingSoon && (
+                <div className="text-center">
+                  <span className="inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-[#9d4edd]/20 to-[#FF6B35]/20 text-[#F5F3F4] text-sm font-medium border border-[#9d4edd]/40">
+                    Coming Soon
+                  </span>
+                </div>
+              )}
             </div>
           ))}
         </div>
