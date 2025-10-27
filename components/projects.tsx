@@ -18,7 +18,6 @@ const projects = [
       "A smart whiteboard that listens, sees, and teaches with voice input, vision analysis, and AI-powered tutoring guidance.",
     tech: ["React", "TypeScript", "Vite", "Google Gemini", "ElevenLabs TTS"],
     github: "https://github.com/alexiwisteria/AIVoiceTutor",
-    demo: "https://ai-whiteboard-voice-r4vc.bolt.host/",
     hasVideo: true,
   },
   {
@@ -85,14 +84,14 @@ export function Projects() {
                     </Button>
                   )}
 
-                  {project.demo && (
+                  {(project as any).demo && (
                     <Button
                       size="sm"
                       variant="outline"
                       className="border-[#FF6B35]/40 text-[#F5F3F4] hover:bg-[#FF6B35]/10 bg-transparent flex-1"
                       asChild
                     >
-                      <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                      <a href={(project as any).demo} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="w-4 h-4 mr-2" />
                         Demo
                       </a>
