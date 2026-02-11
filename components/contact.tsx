@@ -6,7 +6,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Github, Linkedin, Youtube } from "lucide-react"
+import { Github, Linkedin } from "lucide-react"
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -146,15 +146,6 @@ export function Contact() {
                   className="p-3 rounded-lg bg-gradient-to-br from-[#FF6B35]/20 to-[#9d4edd]/20 hover:from-[#FF6B35]/30 hover:to-[#9d4edd]/30 border border-[#FF6B35]/30 transition-all hover:shadow-lg hover:shadow-[#FF6B35]/20"
                 >
                   <Linkedin className="w-6 h-6 text-[#F5F3F4]" />
-                </a>
-
-                <a
-                  href="https://www.youtube.com/@alexisbinchlee/featured"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 rounded-lg bg-gradient-to-br from-[#FF6B35]/20 to-[#9d4edd]/20 hover:from-[#FF6B35]/30 hover:to-[#9d4edd]/30 border border-[#FF6B35]/30 transition-all hover:shadow-lg hover:shadow-[#FF6B35]/20"
-                >
-                  <Youtube className="w-6 h-6 text-[#F5F3F4]" />
                 </a>
               </div>
             </div>
