@@ -21,14 +21,6 @@ const projects = [
     hasVideo: true,
   },
   {
-    slug: "cleariq",
-    title: "ClearIQ",
-    description:
-      "An AI-powered dashboarding application that transforms data into actionable insights.",
-    tech: ["AI", "Dashboarding", "Data Visualization"],
-    comingSoon: true,
-  },
-  {
     slug: "job-roster",
     title: "Job Roster",
     description:

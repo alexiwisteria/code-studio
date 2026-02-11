@@ -54,20 +54,6 @@ const projectData: Record<
     github: "https://github.com/alexiwisteria/AIVoiceTutor",
     demo: "https://ai-whiteboard-voice-r4vc.bolt.host/",
   },
-  cleariq: {
-    title: "ClearIQ",
-    description: "An AI-powered dashboarding application that transforms complex data into actionable insights.",
-    longDescription:
-      "ClearIQ is an advanced AI-powered dashboarding application designed to help businesses and individuals make sense of their data through intelligent visualization and analysis. By leveraging cutting-edge AI capabilities, ClearIQ automatically identifies patterns, generates insights, and presents data in an intuitive, actionable format.",
-    tech: ["AI", "Dashboarding", "Data Visualization"],
-    features: [
-      "Intelligent data analysis and pattern recognition",
-      "Automated insight generation from complex datasets",
-      "Intuitive and user-friendly dashboard interface",
-      "Customizable visualizations and reports",
-      "Real-time data processing and updates",
-    ],
-  },
   "job-roster": {
     title: "Job Roster",
     description:
