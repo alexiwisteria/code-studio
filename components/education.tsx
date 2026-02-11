@@ -20,9 +20,8 @@ export function Education() {
                 </div>
 
                 <p className="text-[#FF8BA7] font-medium mb-3">Ensign College</p>
-
+                Project-based program emphasizing hands-on software development.
                 <p className="text-[#F5F3F4]/80 leading-relaxed">
-                  Focus: Data Structures, Object-Oriented Programming, Full-Stack Development, Agile Project Management.
                 </p>
               </div>
             </div>
