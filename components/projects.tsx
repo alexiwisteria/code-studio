@@ -28,6 +28,14 @@ const projects = [
     tech: ["AI", "Dashboarding", "Data Visualization"],
     comingSoon: true,
   },
+  {
+    slug: "job-roster",
+    title: "Job Roster",
+    description:
+      "A full-stack dashboard to track job applications, pipeline stages, contacts, and interviews with a modern UI and persistent data.",
+    tech: ["Next.js", "React 19", "TypeScript", "Tailwind CSS", "Supabase", "SWR", "Radix UI"],
+    hasVideo: false,
+  },
 ]
 
 export function Projects() {

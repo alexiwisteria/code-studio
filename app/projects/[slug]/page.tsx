@@ -68,6 +68,35 @@ const projectData: Record<
       "Real-time data processing and updates",
     ],
   },
+  "job-roster": {
+    title: "Job Roster",
+    description:
+      "A full-stack dashboard to track job applications, pipeline stages, contacts, and interviews with a modern UI and persistent data.",
+    longDescription:
+      "Job Roster is a full-stack job-application tracker built to keep a job search organized in one place. Users can add applications, move them through custom pipeline stages (e.g. Applied → Interviewing → Offer / Rejected), log calls and interviews, store job descriptions and notes, and manage contacts per application. The app includes authentication, onboarding, terms acceptance, and optional feedback, with a responsive UI and light/dark theme support.",
+    tech: [
+      "Next.js (App Router)",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "SWR",
+      "Radix UI / shadcn-ui",
+      "next-themes",
+      "Lucide icons",
+    ],
+    features: [
+      "Kanban board — Drag-and-drop applications across customizable columns (Applied, Interviewing, Offer, Rejected); add and rename columns with configurable colors.",
+      "Multiple views — Board, List (table), and Calendar views; calendar shows scheduled interviews.",
+      "Application detail — Editable job description and notes, status progression, activity log (calls, texts, emails, notes, interviews), contacts per application, archive/unarchive.",
+      "Search — Search applications from the top nav.",
+      "Archive — Archive applications; access from a dedicated archive page; unarchive from the detail page.",
+      "Auth & onboarding — Email/password sign-up and login via Supabase Auth; middleware protects routes; onboarding and terms-acceptance flow for new users.",
+      "Profile & settings — Profile dropdown, display name, theme (light/dark/system) with persistence.",
+      "Feedback — Optional in-app feedback with API route for submission.",
+      "Design — Responsive layout, Sora font, soft palette and gradients, Tailwind and Radix-based design system.",
+    ],
+  },
 }
 
 export default async function ProjectPage({

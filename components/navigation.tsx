@@ -19,7 +19,6 @@ export function Navigation() {
   const navLinks = [
     { href: "#skills", label: "Skills" },
     { href: "#projects", label: "Projects" },
-    { href: "#coding-activity", label: "Stats" },
     { href: "#experience", label: "Experience" },
     { href: "#education", label: "Education" },
     { href: "#contact", label: "Contact" },
