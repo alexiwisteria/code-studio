@@ -2,22 +2,34 @@ import { Briefcase } from "lucide-react"
 
 const experiences = [
   {
+    title: "SaaS Product Support Specialist",
+    company: "Podium",
+    period: "Dec 2025 – Present",
+    description: "Supporting customers by understanding their needs, translating them into technical solutions, and explaining technical resolutions in clear terms.",
+  },
+  {
     title: "DevOps Intern",
     company: "Third Wave Innovations",
-    period: "2024 – Present",
+    period: "Aug 2025 – Dec 2025",
     description: "Designed CI/CD pipelines, built Flask provider abstractions, and developed dashboard analytics.",
   },
   {
     title: "Student Software Engineer",
     company: "Ensign College",
-    period: "2024 – 2025",
+    period: "Apr 2025 – Aug 2025",
     description: "Created an AI Autograder using Canvas + OpenAI, improving grading efficiency.",
   },
   {
     title: "Help Desk Technician",
     company: "Ensign College",
-    period: "2024 – 2025",
+    period: "Apr 2024 – Apr 2025",
     description: "Provided QA support during Wi-Fi migration using ServiceNow.",
+  },
+  {
+    title: "Independent Projects",
+    company: "Ongoing",
+    period: "Ongoing",
+    description: "Side projects are how I sharpen my skills as a professional developer and explore a path toward building and shipping as an independent developer.",
   },
 ]
 
